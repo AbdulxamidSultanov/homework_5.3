@@ -1,14 +1,79 @@
 // ============
 // 1-masala:
-//
+/*
+1. Tugma bosilganda rangni o'zgartirish
 
+    Vazifa: HTML sahifasida bir nechta matn yozilgan bo‘lsin. "Matn rangini o'zgartirish" tugmasi bosilganda, barcha matnning rangi tasodifiy rangga o  ‘zgartirilsin.
+
+        Ko‘rsatma:
+        1. getElementById yoki querySelectorAll yordamida matnni olish.
+        2. Tugma bosilganda rangni o‘zgartirish uchun style.colordan foydalanish.
+        3. Rangni tasodifiy olish uchun Math.random()ni ishlatish.
+*/
+const firstWords = document.getElementById("1vazifa");
+const btn = document.querySelector(".btn");
+
+btn &&
+  btn.addEventListener("click", function () {
+    let x = Math.trunc(Math.random() * 256);
+    let y = Math.trunc(Math.random() * 256);
+    let z = Math.trunc(Math.random() * 256);
+    const color = "rgb(" + x + ", " + y + ", " + z + ")";
+    firstWords.style.color = color;
+  });
 // ============
 // 2-masala:
-//
+/*
+Inputdagi qiymatni clipboardga nusxalash
+
+    Vazifa: Foydalanuvchi input maydoniga matn yozadi. "Nusxa olish" tugmasi bosilganda, inputdagi qiymat clipboardga nusxalanadi va sahifada xabar ("Matn nusxalandi!") chiqariladi.
+
+        Ko‘rsatma:
+        1. querySelector orqali input va tugmani olish.
+        2. Tugma bosilganda navigator.clipboard.writeText yordamida clipboardga yozib olish.
+        3. Xabar chiqarish uchun DOM element yaratish va qo‘shish.
+
+*/
+const input = document.getElementById("input");
+const btn2 = document.querySelector(".btn2");
+const createElement = document.querySelector(".newElement");
+
+btn2 &&
+  btn2.addEventListener("click", function () {
+    const text = input.value;
+    navigator.clipboard.writeText(text);
+    alert("Nusxa olindi");
+    createElement.textContent = text;
+  });
 
 // ============
 // 3-masala:
-//
+/* Qidiruv natijasini belgilash
+
+    Vazifa: Sahifada matn yozilgan bo‘lsin. Foydalanuvchi qidiruv maydoniga so‘z kiritadi va "Qidirish" tugmasini bosadi. Sahifada shu so‘z bo‘lsa, uning orqa foni sariq rangga bo‘yaladi.
+
+    Ko‘rsatma:
+    1. querySelector orqali matn va input maydonini olish.
+    2. Tugma bosilganda innerHTML orqali matnni bo‘yalgan elementlarga ajratish (masalan, <span style="background-color: yellow">).
+    3. replace() funksiyasidan foydalanish.
+*/
+
+const text2 = document.getElementById("text")
+const findPlace = document.querySelector("input2")
+const btn3 = document.querySelector("btn3")
+
+btn3 && btn3.addEventListener("click", function() {
+  const strToArr = text2.split(" ")
+  strToArr.forEach(arr => {
+    if(findPlace == arr){
+      console.log(arr)
+    }else{
+      console.log(arr)
+    }
+  })
+  strToArr.join('')
+})
+
 
 // ============
 // 4-masala:
