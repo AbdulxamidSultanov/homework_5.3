@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body style="background-color: #ccc">
+  <body style="background-color: #ccc" id="body">
     <div class="1-vazifa">
       <p id="1vazifa">Lorem ipsum dolor sit amet consectetur.</p>
       <button class="btn">Change Text Color to random Color</button>
@@ -22,10 +22,113 @@
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
         quod?
       </p>
-      <input type="text" id="input2">
+      <input type="text" id="input2" />
       <button class="btn3">Find</button>
     </div>
-    
+
+    <div class="4-vazifa" data-action="">
+      <p class="text1">Lorem ipsum dolor sit amet.</p>
+      <p class="text1">Lorem ipsum dolor sit amet.</p>
+      <p class="text1">Lorem ipsum dolor sit amet.</p>
+      <button class="hide">hide</button>
+      <button class="show">show</button>
+    </div>
+
+    <div class="5-masala">
+      <button class="colorChangerRed">red</button>
+      <button class="colorChangerGreen">green</button>
+      <button class="colorChangerBlue">blue</button>
+    </div>
+
+    <div class="6-masala">
+      <h1 class="tittles" style="cursor: pointer">
+        Lorem ipsum dolor sit amet.
+      </h1>
+      <h2 class="tittles" style="cursor: pointer">
+        Lorem ipsum dolor sit amet consectetur.
+      </h2>
+      <h3 class="tittles" style="cursor: pointer">
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+      </h3>
+      <h4 class="tittles" style="cursor: pointer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h4>
+    </div>
+
+    <div class="7-masala">
+      <input type="text" placeholder="Matn kriting" id="input3" />
+      <textarea
+        name=""
+        id="placeHol"
+        style="
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          width: 400px;
+          height: 300px;
+        "
+      ></textarea>
+    </div>
+
+    <div class="8-masala" style="margin-bottom: 50px">
+      <input type="text" value="" id="input4" />
+      <button
+        id="closePass"
+        style="
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+          max-height: 24px;
+          display: inline-block;
+        "
+      >
+        <img
+          style="max-width: 24px; max-height: 24px; margin: 0; padding: 0"
+          id="closeEye"
+          src="img/eyeClose.svg"
+          alt=""
+        />
+      </button>
+      <button
+        style="padding: 0; margin: 0; cursor: pointer; display: none"
+        id="openPass"
+      >
+        <img src="img/eye.svg" alt="" />
+      </button>
+    </div>
+
+    <div
+      class="square"
+      class="9-masala"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 250px;
+        min-height: 250px;
+      "
+    >
+      <div
+        style="
+          width: 100px;
+          height: 100px;
+          border: 1px solid #000;
+          background-color: #000;
+          display: flex;
+        "
+      ></div>
+    </div>
+    <div class="arrows">
+      <button>left</button>
+      <button>up</button>
+      <button>down</button>
+      <button>right</button>
+    </div>
+
+    <div class="10-vazifa">
+      <img id="img" src="" alt="">
+      <button id="refreshBtn">refresh</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
