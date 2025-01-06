@@ -254,22 +254,46 @@ refreshBtn &&
   refreshBtn.addEventListener("click", function () {
     let randomImg = Math.trunc(Math.random() * 10);
     img.src = `${stuckImg[randomImg]}`;
-    console.log(randomImg);
   });
 // ============
 // 11-masala:
-/* Paragraflarni yashirish va ko‘rsatish
-Vazifa: Sahifada bir nechta paragraflar bo‘lsin. Har bir paragraf yonida "Yashirish" tugmasi bo‘lsin. Tugma bosilganda faqat o‘sha paragraf yashiriladi.
-Ko‘rsatma:
-querySelectorAll orqali barcha paragraflarni olish.
-Har bir paragraf uchun "Yashirish" tugmasi yaratib, ulash.
-Tugma bosilganda tegishli paragrafni style.display = "none" qilish.
+/*Paragraflarni yashirish va ko‘rsatish
+    Vazifa: Sahifada bir nechta paragraflar bo‘lsin. Har bir paragraf yonida "Yashirish" tugmasi bo‘lsin. Tugma bosilganda faqat o‘sha paragraf yashiriladi.
+      Ko‘rsatma:
+      1. querySelectorAll orqali barcha paragraflarni olish.
+      2. Har bir paragraf uchun "Yashirish" tugmasi yaratib, ulash.
+      3. Tugma bosilganda tegishli paragrafni style.display = "none" qilish.
  */
+const paragrafs = document.querySelectorAll(".texts");
+
+paragrafs.forEach((paragraf) => {
+  const hideBtn = document.createElement("button");
+  hideBtn.textContent = "hidetext";
+  paragraf.after(hideBtn);
+  hideBtn.addEventListener("click", function () {
+    paragraf.style.display = "none";
+  });
+});
 
 // ============
 // 12-masala:
-//
+/*
+Vazifa: Sahifada bir nechta paragraflar yozilgan bo‘lsin. Foydalanuvchi har bir paragrafga bosganda, o‘sha matn "Salom, dunyo!" ga almashtiriladi.
+Ko‘rsatma:
+querySelectorAll orqali barcha paragraflarni olish.
+Har biriga click hodisasini ulash.
+innerTextni o‘zgartirib, yangi matnni ko‘rsatish. */
 
+const paragraphs = document.querySelectorAll(".paragraphs");
+
+paragraphs.forEach((paragraph) => {
+  paragraph.addEventListener("click", function () {
+    paragraph.innerText = "Hello, world!";
+    
+  });
+  paragraph.style.cursor = "pointer";
+  
+});
 // ============
 // 13-masala:
 //
